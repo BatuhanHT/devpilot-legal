@@ -16,7 +16,28 @@ PAGES = {
     "privacy.tr.md": ("privacy.tr.html", "tr", "privacy.html", "English"),
     "terms.en.md": ("terms.html", "en", "terms.tr.html", "Türkçe"),
     "terms.tr.md": ("terms.tr.html", "tr", "terms.html", "English"),
+    "support.en.md": ("support.html", "en", "support.tr.html", "Türkçe"),
+    "support.tr.md": ("support.tr.html", "tr", "support.html", "English"),
 }
+
+# Destek sayfalarının altına eklenen iletişim bölümü.
+# E-posta adresi belli olunca buraya yaz; boşsa yalnızca GitHub Issues gösterilir.
+SUPPORT_EMAIL = ""
+ISSUES_URL = "https://github.com/BatuhanHT/devpilot-legal/issues"
+CONTACT = {
+    "en": ("Contact", "Email", "Open an issue on GitHub", "Issues are public. Do not post passwords, tokens or private data."),
+    "tr": ("İletişim", "E-posta", "GitHub'da bir konu açın", "Konular herkese açıktır. Parola, token veya özel veri paylaşmayın."),
+}
+
+
+def contact_block(lang: str) -> str:
+    heading, email_label, issues_label, warning = CONTACT[lang]
+    lines = []
+    if SUPPORT_EMAIL:
+        mail = html.escape(SUPPORT_EMAIL)
+        lines.append(f'<li>{email_label}: <a href="mailto:{mail}">{mail}</a></li>')
+    lines.append(f'<li><a href="{ISSUES_URL}">{issues_label}</a></li>')
+    return f"<h2>{heading}</h2>\n<ul>{''.join(lines)}</ul>\n<p>{html.escape(warning)}</p>"
 HOME_LABEL = {"en": "Home", "tr": "Ana sayfa"}
 
 CSS = """
@@ -80,6 +101,8 @@ def render(markdown: str) -> tuple[str, str]:
 def main() -> None:
     for source, (target, lang, other, other_label) in PAGES.items():
         title, body = render((SOURCE / source).read_text(encoding="utf-8"))
+        if source.startswith("support."):
+            body += "\n" + contact_block(lang)
         nav = f'<nav><a href="./">{HOME_LABEL[lang]}</a><a href="{other}" hreflang="{"tr" if lang == "en" else "en"}">{other_label}</a></nav>'
         (ROOT / target).write_text(page(lang, title, nav, body), encoding="utf-8")
 
@@ -88,8 +111,10 @@ def main() -> None:
 <div class="cards">
 <a class="card" href="privacy.html">Privacy Policy<span>English</span></a>
 <a class="card" href="terms.html">Terms of Use<span>English</span></a>
+<a class="card" href="support.html">Support<span>English</span></a>
 <a class="card" href="privacy.tr.html">Gizlilik Politikası<span>Türkçe</span></a>
 <a class="card" href="terms.tr.html">Kullanım Koşulları<span>Türkçe</span></a>
+<a class="card" href="support.tr.html">Destek<span>Türkçe</span></a>
 </div>"""
     (ROOT / "index.html").write_text(page("en", "DevPilot", "", index), encoding="utf-8")
     print("Üretildi:", ", ".join(sorted(p.name for p in ROOT.glob("*.html"))))
