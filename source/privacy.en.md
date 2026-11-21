@@ -39,4 +39,4 @@ We may update this policy. The date above shows the latest version.
 
 ## Contact
 
-You can reach us through the support contact listed on DevPilot's App Store page.
+You can reach us at btemelbusiness@outlook.com.

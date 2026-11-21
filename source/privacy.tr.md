@@ -39,4 +39,4 @@ Bu politikayı güncelleyebiliriz. Yukarıdaki tarih en son sürümü gösterir.
 
 ## İletişim
 
-Bize DevPilot'un App Store sayfasında yer alan destek iletişim bilgisinden ulaşabilirsiniz.
+Bize btemelbusiness@outlook.com adresinden ulaşabilirsiniz.

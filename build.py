@@ -21,8 +21,8 @@ PAGES = {
 }
 
 # Destek sayfalarının altına eklenen iletişim bölümü.
-# E-posta adresi belli olunca buraya yaz; boşsa yalnızca GitHub Issues gösterilir.
-SUPPORT_EMAIL = ""
+# Destek e-postası; boş bırakılırsa yalnızca GitHub Issues gösterilir.
+SUPPORT_EMAIL = "btemelbusiness@outlook.com"
 ISSUES_URL = "https://github.com/BatuhanHT/devpilot-legal/issues"
 CONTACT = {
     "en": ("Contact", "Email", "Open an issue on GitHub", "Issues are public. Do not post passwords, tokens or private data."),
