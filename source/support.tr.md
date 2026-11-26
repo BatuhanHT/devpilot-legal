@@ -4,11 +4,11 @@ Sık sorulan soruların yanıtları. Aradığınızı bulamazsanız sayfanın al
 
 ## Hesabımı nasıl silerim?
 
-Ayarlar → Gizlilik ve Veri → Hesabı sil seçeneğini açıp onaylayın. Bu işlem hesabınızı, sohbetlerinizi, mesajlarınızı, kod kitaplığınızı, projelerinizi ve profilinizi sunucularımızdan kalıcı olarak kaldırır. Geri alınamaz.
+Profil → Ayarlar → Gizlilik ve Veri bölümünde Hesabı sil'i açın, Hesabı sil düğmesine dokunup onaylayın. Bu işlem hesabınızı, sohbetlerinizi, mesajlarınızı, kod kitaplığınızı, projelerinizi ve profilinizi sunucularımızdan kalıcı olarak kaldırır. Geri alınamaz.
 
 ## Yapay zekâya veri gönderimini nasıl kapatırım?
 
-Ayarlar → Gizlilik ve Veri bölümünde "Yapay zekâya veri gönderimi" anahtarını kapatın. Kapalıyken sohbet ve kod analizi çalışmaz. İstediğiniz zaman tekrar açabilirsiniz.
+Profil → Ayarlar → Gizlilik ve Veri bölümünde "Yapay zekâya veri gönderimi" anahtarını kapatın. Kapalıyken sohbet ve kod analizi çalışmaz. İstediğiniz zaman tekrar açabilirsiniz.
 
 ## Yapay zekâ servisine hangi veriler gönderilir?
 
@@ -20,7 +20,7 @@ Hizmeti korumak için yapay zekâ istekleri kullanıcı başına sınırlıdır:
 
 ## GitHub reposundan dosyayı nasıl açarım?
 
-Repositories sekmesinde bir projeye repo bağlayın. Herkese açık repolar token gerektirmez. Özel repolar için Ayarlar → GitHub bölümünde salt-okunur bir erişim token'ı ekleyin; yalnızca cihazınızın Keychain'inde saklanır.
+Repositories sekmesinde bir projeye repo bağlayın. Herkese açık repolar token gerektirmez. Özel repolar için Profil sekmesinin GitHub bölümünde salt-okunur bir erişim token'ı ekleyin; yalnızca cihazınızın Keychain'inde saklanır.
 
 ## Uygulama dilini nasıl değiştiririm?
 
