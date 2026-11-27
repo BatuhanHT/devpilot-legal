@@ -109,6 +109,8 @@ def main() -> None:
     index = """<h1>DevPilot</h1>
 <p>AI-native engineering cockpit for iOS.</p>
 <div class="cards">
+<a class="card" href="https://apps.apple.com/app/id6837625215">Download on the App Store<span>iPhone, free</span></a>
+<a class="card" href="indir.html">DevPilot’u indir<span>Türkçe</span></a>
 <a class="card" href="privacy.html">Privacy Policy<span>English</span></a>
 <a class="card" href="terms.html">Terms of Use<span>English</span></a>
 <a class="card" href="support.html">Support<span>English</span></a>
